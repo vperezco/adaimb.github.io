@@ -9,12 +9,12 @@
 title: ADAIMB
 
 # Your name to show in the footer
-author: Some Person
+author: Victoria Perez Cortes, David Sollander, Anastassia Rowe
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
+  About Me: "aboutus"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
