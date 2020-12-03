@@ -4,7 +4,7 @@ title: Predicting the Present
 subtitle: Think with Google
 ---
 
-![](../img/Geneva panorama.jpg){: .align-center}
+![](../img/fabrizio-verrecchia-Ai7sV3SSMIQ-unsplash.jpg){: .align-center}
 
 It has been common knowledge for quite some time that Google, amongst other companies, have a great influence on events. People were made even more aware of this influence, recently, during the 2016 American elections. 
 A group of researchers have recently developed a theory which states that Google Trends allow to predict the present. You must ask yourself, how can we predict the present ? The idea is to use Google Trends from previous weeks/months and see if those trends give us a good representation about what is happening right now. 
@@ -17,13 +17,6 @@ To help us on our project, we relied on a paper (reference) which carried a simi
 
 ## Structure:
 
-This website is structured in four sections:
-1. [Getting started](pages/Gilcompa) where a general overview is provided.
-2. [A visual story](/pages/Milani) is developped to analyse some particular accident cases.
-3. [The risk calculator](/pages/risk_calculator), a quick tool to compute the risk associated to roads in Geneva
-4. [Safety maps](/pages/safety_map) proof of concept of how we could apply the computed risk per road to directions applications (e.g. SBB/CFF or Google Maps)
-
-If you want further information about this project, do not hesitate to visit the [about page](/pages/about)
 
 
 
