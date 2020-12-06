@@ -20,7 +20,7 @@ navbar-links:
 #    - lala: "lala"
 #    - raw Map: "maps/map1"
 #    - Embedded map: "maps/map_test"
-  What are Google Trends: "pages/Trends"
+  What are Google Trends: "pages/What-are-Google-Trends?."
   A visual story:   "pages/Milani"
   Exchange rates prediction: "pages/risk_calculator"
   About:
