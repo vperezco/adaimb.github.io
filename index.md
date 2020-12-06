@@ -17,7 +17,8 @@ To help us on our project, we relied on a paper (reference) which carried a simi
 
 ## Structure:
 
-
+This website is structured in three sections:
+1. [What are Google Trends?](/_posts/What-are-Google-Trends?) where a general overview is provided.
 
 
 
