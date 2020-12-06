@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: What are Google Trends? 
 subtitle: Excerpt from Soulshaping by Jeff Brown
 cover-img: /img/Trends.jpg
