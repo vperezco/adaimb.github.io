@@ -22,11 +22,11 @@ To help us on our project, we relied on a paper (reference) which carried a simi
 This website is structured in three sections:
 
 ## <a class="anchor"></a> Index
-1. [What are Google Trends](#-1.-What-are-Google-Trends)
-    1. [What does Google Trends measure anyway?](#-1.A.-What-does-Google-Trends-measure-anyway?)
-    2. [Example: The rise and fall of the blu-ray](#-1-B-The-rise-and-fall-of-blu-ray)
-2. [A data Story](#-2.-A-data-story) (**3 points**)
-    1. [The curse of unemployment](#-2.A.-Curse-of-unemployment)
+1. [What are Google Trends](#-1.-What-are-google-trends)
+    1. [What does Google Trends measure anyway?](#-1.A.-what-does-Google-Trends-measure-anyway?)
+    2. [Example: The rise and fall of the blu-ray](#-1.B.-The-rise-and-fall-of-blu-ray)
+2. [A data Story](#-2.-A-data-story)
+    1. [The curse of unemployment](#2.A.-Curse-of-unemployment)
     2. [Will we ever get a job some day?](#-2.B.-Will-we-ever-get-a-job-some-day?)
 3. [Predict the unpredictable](#-3.-Predict-the-unpredictable) 
 
@@ -54,6 +54,7 @@ It combines all of queries into a unique measure of popularity and scales their 
 ## <a class="anchor"></a> 1.B.The-rise-and-fall-of-blu-ray
 
 Who remembers blu-rays? This technology was used for a period, but nowadays with the emergence of streaming devices such as Netflix, you will probably make fun of someone asks you to watch a blu-ray with him. With Google trends, we can see the when was the golden age of blu-rays, as that and when it began to collapse. 
+
 
 # <a class="anchor"></a> 2. A data Story
 [Back to index](#-Index)
