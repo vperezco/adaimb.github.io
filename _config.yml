@@ -22,7 +22,6 @@ navbar-links:
 #    - Embedded map: "maps/map_test"
   About:
     - Team and project: "pages/about"
-    - References: "pages/appendix"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
