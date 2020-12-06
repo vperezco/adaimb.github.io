@@ -57,6 +57,17 @@ It combines all of queries into a unique measure of popularity and scales their 
 
 Who remembers blu-rays? This technology was used for a period, but nowadays with the emergence of streaming devices such as Netflix, you will probably make fun of someone asks you to watch a blu-ray with him. With Google trends, we can see the when was the golden age of blu-rays, as that and when it began to collapse. 
 
+![Image](../img/Bluray.jpg)
+
+<br>
+<br>
+
+According to Google searches of the term 'Blu-ray Disc' in all countries, we can see that the popularity of blu-ray discs was the highest in 2009/2010, few years after its launch, but decreases continuously since these years 
+
+![Image](../img/Bluray-netflix.jpg)
+
+<br>
+<br>
 
 <a name="story"></a> 
 # 2. A data story
