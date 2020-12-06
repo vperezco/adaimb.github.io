@@ -23,8 +23,8 @@ This website is structured in three sections:
 
 ## <a class="anchor"></a> Index
 1. [What are Google Trends](#-1.-What-are-Google-Trends)
-  1. [What does Google Trends measure anyway?](#-1.A.-What-does-Google-Trends-measure-anyway?)
-  2.[Example: The rise and fall of the blu-ray](#-1-B-The-rise-and-fall-of-blu-ray)
+    1. [What does Google Trends measure anyway?](#-1.A.-What-does-Google-Trends-measure-anyway?)
+    2. [Example: The rise and fall of the blu-ray](#-1-B-The-rise-and-fall-of-blu-ray)
 2. [A data Story](#-2.-A-data-story) (**3 points**)
     1. [The curse of unemployment](#-2.A.-Curse-of-unemployment)
     2. [Will we ever get a job some day?](#-2.B.-Will-we-ever-get-a-job-some-day?)
@@ -36,7 +36,7 @@ This website is structured in three sections:
 [Back to index](#-Index)
 ## <a class="anchor"></a> 1.A. What does Google Trends measure anyway?
 
-![Image](../img/Trends.png)
+![Image](../img/Trends.jpg)
 
 <br>
 <br>
@@ -59,10 +59,10 @@ Who remembers blu-rays? This technology was used for a period, but nowadays with
 [Back to index](#-Index)
 
 ## <a class="anchor"></a> 2.A. The curse of unemployment
-[Back to index](#-Index)
+
 
 ## <a class="anchor"></a> 2.B. Will we ever get a job some day?
-[Back to index](#-Index)
+
 
 
 # <a class="anchor"></a> 2. Predict the unpredictable
