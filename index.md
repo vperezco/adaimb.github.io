@@ -2,6 +2,8 @@
 layout: home
 title: Predicting the Present 
 subtitle: Think with Google
+use-site-title: true
+
 ---
 
 ![](../img/fabrizio-verrecchia-Ai7sV3SSMIQ-unsplash.jpg){: .align-center}
