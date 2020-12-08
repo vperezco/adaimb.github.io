@@ -82,7 +82,7 @@ According to Google searches of the term 'Blu-ray Disc' in all countries, we can
 
 
 <a name="predict"></a> 
-# 3. Predict the unpredictable
+# 3. Where do I get the best exchange rate ?
 
 
 
