@@ -86,11 +86,14 @@ According to Google searches of the term 'Blu-ray Disc' in all countries, we can
 
 <a name="curse"></a> 
 ## 3.A. Google Trends and the forecasting performance of exchange rate models
-
+EXPLAIN THE MODEL (WHAT TRENDS, WHY ONLY ONE SEASONAL TERM ETC...)
+TABLE WITH MAES, EXPLANATION
+FIGURE 
 
 
 <a name="curse"></a> 
-## 3.B. Can we predict the drops ?
+## 3.B. Can we predict the financial drops ?
+MAE ONLY FOR THE RECESSION OF 2008 
 
 Can we use the google trends model to predict financial recession?
 
