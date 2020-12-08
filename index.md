@@ -82,8 +82,16 @@ According to Google searches of the term 'Blu-ray Disc' in all countries, we can
 
 
 <a name="predict"></a> 
-# 3. Where do I get the best exchange rate ?
+# 3. How do I get the best exchange rate ?
+
+<a name="curse"></a> 
+## 3.A. Google Trends and the forecasting performance of exchange rate models
 
 
+
+<a name="curse"></a> 
+## 3.B. Can we predict the drops ?
+
+Can we use the google trends model to predict financial recession?
 
 [//]:#(---------- END OF WHAT IS VISIBLE ----------------)
