@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Predicting the Present 
-subtitle: Think with Google
+subtitle: Ok Google
 use-site-title: true
 
 ---
