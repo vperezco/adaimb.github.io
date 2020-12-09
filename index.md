@@ -73,11 +73,44 @@ According to Google searches of the term 'Blu-ray Disc' in all countries, we can
 <a name="story"></a> 
 # 2. A data story
 
+Nowadays, we can safely say that job search is one of the main concerns for today's young people. We're not talking about a funny subject here, sorry if it's your concern too, we didn't intend to remind you that you are jobless ^^.  Indeed, the world has entered a new demographic, geopolitical, economic and socio-cultural situation. In this world, employment is an essential element for functioning of industrial societies and of the place of individuals in social relation. Even if today the society is well-evolved and most of the people benefits to be in good health, educated and trained to a high standard, a lot still struggle to find an employment and get inserted in the society. In this context, it could be interesting to analyze rates of unemployment initial claims to see how much people are searching a job and relate this to a specific period. But, why the unemployment initial claims are increasing or decreasing? To interpret this, it could be interesting to use Google Trends to predict these observations and find out if they are somehow related to a societal elements (like an economic crisis, an epidemy etc...). The second goal is to see the how reliable this model is, if we can rely on these predictions to adapt political and economic decisions.
+
 <a name="curse"></a> 
 ## 2.A. The curse of unemployment
 
+
 <a name="job"></a> 
 ## 2.B. Will we ever get a job some day?
+
+We will now show that it is possible to predict the unemployment rate for the next months, in other words we could almost say that we are trying to predict the rate of people who do not have a very great life at the moment. In order to do this, we will build a linear autoregressive model. Are you lost because you don't know what that is ? Don't worry, we will give some more details. 
+
+This model is like a linear regression, but instead of predicting the response (here the initial claims for unemployment benefits) with other observations that might be related to the response , we will predict our response basing us on previous observations of this same observation. So we have the following relation: 
+
+<div align="center">$y_{t} = b_1y_{t-1} + b_0 +e_{t}$  
+    
+where b_1 and b_0 are the coefficients obtained fitting the model. We will call this the base model. We will train this model for the period between 2011 and 2020.
+
+Once we have this model, it's time to play with the Google Trends ! 
+
+We are using here the trends $Local/Jobs$ and $Society/Social Services/Welfare & Unemployment$ for 2 reasons. The first one, these are categories, that means that they identify all the queries that are related to $Jobs$ and $Welfare & Unemployment$ so we don't have the problem of not taking the right search term to predict the response. The second is that these categories have been identified to be the most useful for this subject. 
+
+The trends model look like this : 
+
+<div align="center">$y_{t} = b_1y_{t-1} + b_2*Jobs + b_3*Welfare & Unemployment +  b_0 +e_{t}$ 
+    
+So if we train the models for the time period from 2011 to 2020 and we predict for the same period we get : 
+
+![Image](../img/iclaims2011-2020.jpg)
+
+<br>
+<br>
+
+The first thing that we notice is 2020, this sudden increase in the unemployment initial claims. What happened here ? I mean, during the recession there also was an increase where the log of claims reached 14, but here its reaching almost 17 ! And it is safe to say that this might be due to the pandemic. 
+Looking now at the predictions, can see here that the trends model improves the prediction about 19.54% on the overall period and about 42.96% in 2020. From this we can conclude that the trends model helps to improve the predictions compared to the base model. 
+
+However, now can the fact of predicting over a period in which we already know the ins and outs be useful? In real life, when we try to forecast, we don't know the response because it's what we are searching ! So now, we are in december 2019, the New Year comes, everybody is asking you what are you plans for 2020, and you know exactly what it is... your plans for 2020 are to predict the unemployment initial claims ! Will Google trends help you to build a solid prediction for 2020 ? That's what we are going to find out !
+
+Our base and trends models is now trained for the observations from 2011 until December 2019, and our prediction period will be from January 2020 to November 2020. 
 
 
 
