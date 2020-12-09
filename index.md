@@ -59,14 +59,12 @@ It combines all of queries into a unique measure of popularity and scales their 
 Who remembers blu-rays? This technology was used for a period, but nowadays with the emergence of streaming devices such as Netflix, you will probably make fun of someone asks you to watch a blu-ray with him. With Google trends, we can see the when was the golden age of blu-rays, as that and when it began to collapse. 
 
 ![Image](../img/Bluray.jpg)
-
 <br>
 <br>
 
 According to Google searches of the term 'Blu-ray Disc' in all countries, we can see that the popularity of blu-ray discs was the highest in 2009/2010, few years after its launch, but decreases continuously since these years 
 
 ![Image](../img/Bluray-netflix.jpg)
-
 <br>
 <br>
 
@@ -93,7 +91,7 @@ We will now show that it is possible to predict the unemployment rate for the ne
 This model is like a linear regression, but instead of predicting the response (here the initial claims for unemployment benefits) with other observations that might be related to the response , we will predict our response basing us on previous observations of this same observation. So we have the following relation: 
 
 
-<div align="center">$y_{t} = b_1y_{t-1} + b_0 +e_{t}$  </div>
+<div align="center">y_{t} = b_1y_{t-1} + b_0 +e_{t}</div>
     
 where b_1 and b_0 are the coefficients obtained fitting the model. We will call this the base model. We will train this model for the period between 2011 and 2020.
 
@@ -103,12 +101,12 @@ We are using here the trends $Local/Jobs$ and $Society/Social Services/Welfare &
 
 The trends model look like this : 
 
-<div align="center">$y_{t} = b_1y_{t-1} + b_2*Jobs + b_3*Welfare & Unemployment +  b_0 +e_{t}$</div> 
+<div align="center">y_{t} = b_1y_{t-1} + b_2*Jobs + b_3*Welfare & Unemployment +  b_0 +e_{t}</div> 
     
 So if we train the models for the time period from 2011 to 2020 and we predict for the same period we get :
 
 
-![Image](../img/iclaims2011-2020.jpg)
+![Image](../img/iclaims2011-2020.jpg){ width=50% }
 
 <br>
 <br>
