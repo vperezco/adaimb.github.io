@@ -91,7 +91,7 @@ We will now show that it is possible to predict the unemployment rate for the ne
 This model is like a linear regression, but instead of predicting the response (here the initial claims for unemployment benefits) with other observations that might be related to the response , we will predict our response basing us on previous observations of this same observation. So we have the following relation: 
 
 
-<div align="center">y_{t} = b_1y_{t-1} + b_0 +e_{t}</div>
+<div align="center"> $y_{t} = b_1y_{t-1} + b_0 +e_{t} $ </div>
     
 where b_1 and b_0 are the coefficients obtained fitting the model. We will call this the base model. We will train this model for the period between 2011 and 2020.
 
@@ -101,12 +101,12 @@ We are using here the trends $Local/Jobs$ and $Society/Social Services/Welfare &
 
 The trends model look like this : 
 
-<div align="center">y_{t} = b_1y_{t-1} + b_2*Jobs + b_3*Welfare & Unemployment +  b_0 +e_{t}</div> 
+<div align="center"> $y_{t} = b_1y_{t-1} + b_2*Jobs + b_3*Welfare & Unemployment +  b_0 +e_{t}$ </div> 
     
 So if we train the models for the time period from 2011 to 2020 and we predict for the same period we get :
 
 
-![Image](../img/iclaims2011-2020.jpg){ width=50% }
+![Image](../img/iclaims2011-2020.jpg)
 
 <br>
 <br>
