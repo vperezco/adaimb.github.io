@@ -8,8 +8,8 @@ use-site-title: true
 
 ![](../img/fabrizio-verrecchia-Ai7sV3SSMIQ-unsplash.jpg){: .align-center}
 
-It has been common knowledge for quite some time that Google, amongst other companies, have a great influence on events. People were made even more aware of this influence, recently, during the 2016 American elections. 
-A group of researchers have recently developed a theory which states that Google Trends allow to predict the present. You must ask yourself, how can we predict the present ? The idea is to use Google Trends from previous weeks or months and see if those trends give us a good representation of what is happening right now. 
+It has been common knowledge for quite some time that **Google**, amongst other companies, have a great influence on events. People were made even more aware of this influence, recently, during the 2016 American elections. 
+A group of researchers have recently developed a theory which states that Google Trends allow to predict the present. You must ask yourself, **how can we predict the present ?** The idea is to use Google Trends from previous weeks or months and see if those trends give us a good representation of what is happening right now. 
 We decided to use the methods behind this theory to pursue a project of our own. 
 
 First of all, we decided to study the link between initial claims for unemployment benefits and specific google trends. This example was presented in the original paper but we decided to view the data on another type of figure to give us another perspective and to push the analysis further by applying the method on another time scale.   
@@ -20,7 +20,7 @@ To help us on our project, we relied on a paper (reference) which carried a simi
 
 ## Structure:
 
-This website is structured in three sections:
+This page is structured in three sections:
 
 ## Index
 1. [What are Google Trends](#trends)
@@ -29,7 +29,9 @@ This website is structured in three sections:
 2. [A data Story](#story)
     1. [The curse of unemployment](#unemployment)
     2. [Will we ever get a job some day?](#job)
-3. [Predict the unpredictable](#predict) 
+3. [ How do I get the best exchange rate ?](#exchange) 
+    1. [Google Trends and the forecasting performance of exchange rate models](#model)
+    2. [Can we predict the financial drops ?](#drop)
 
 
 
@@ -55,6 +57,8 @@ It combines all of queries into a unique measure of popularity and scales their 
 
 <a name="bluray"></a> 
 ## 1.B. The rise and fall of blu-ray
+
+We will take a simple example to illustrate the previous section and show how Google Trends are strongly connected to our present. 
 
 Who remembers blu-rays? This technology was used for a period, but nowadays with the emergence of streaming devices such as Netflix, you will probably make fun of someone asks you to watch a blu-ray with him. With Google trends, we can see the when was the golden age of blu-rays, as that and when it began to collapse. 
 
@@ -83,7 +87,7 @@ To interpret this, it could be interesting to use Google Trends to predict these
 ## 2.A. The curse of unemployment
 
 
-![Image](../img/Initial-claims2004/2011.jpg)
+![Image](../img/Initial-claims2004:2011.jpg)
 <br>
 <br>
 
@@ -131,17 +135,17 @@ Predicting with an out-of-sample forecast gives an improvement of **28.24%** for
 Looking at the ANOVA tables of both models, we see that the coefficient for the s1 feature is really small compared to the intercept and the trends features, and its p-value is above 0.05 which means that this term is not very significative to predict the response. That's could be why the trends model performs better. 
 
 
-<a name="predict"></a> 
+<a name="exchange"></a> 
 # 3. How do I get the best exchange rate ?
 
-<a name="curse"></a> 
+<a name="model"></a> 
 ## 3.A. Google Trends and the forecasting performance of exchange rate models
 EXPLAIN THE MODEL (WHAT TRENDS, WHY ONLY ONE SEASONAL TERM ETC...)
 TABLE WITH MAES, EXPLANATION
 FIGURE 
 
 
-<a name="curse"></a> 
+<a name="drop"></a> 
 ## 3.B. Can we predict the financial drops ?
 MAE ONLY FOR THE RECESSION OF 2008 
 
