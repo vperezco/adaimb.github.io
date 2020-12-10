@@ -82,9 +82,11 @@ To interpret this, it could be interesting to use Google Trends to predict these
 <a name="curse"></a> 
 ## 2.A. The curse of unemployment
 
-![Image](../img/initial-claims2004/2011.jpg)
+
+![Image](../img/Initial-claims2004/2011.jpg)
 <br>
 <br>
+
 
 <a name="job"></a> 
 ## 2.B. Will we ever get a job some day?
@@ -94,7 +96,7 @@ We will now show that it is possible to predict the unemployment rate for the ne
 This model is like a linear regression, but instead of predicting the response (here the initial claims for unemployment benefits) with other observations that might be related to the response , we will predict our response basing us on previous observations of this same observation. So we have the following relation: 
 
 
-<div align="center"> $y_{t}$ = b_1*$y_{t-1}$ + b_0 +$e_{t}$  </div>
+<div align="center"> y(t) = b_1*y(t-1) + b_0 +e(t)  </div>
     
 where $b_{1}$ and $b_{0}$ are the coefficients obtained fitting the model. We will call this the base model. We will train this model for the period between 2011 and 2020.
 
@@ -104,7 +106,7 @@ We are using here the trends $Local/Jobs$ and $Society/Social Services/Welfare &
 
 The trends model look like this : 
 
-<div align="center"> $y_{t}$ = b_1*$y_{t-1}$ + b_2*Jobs + b_3*Welfare & Unemployment +  $b_{0}$ +$e_{t}$ </div> 
+<div align="center"> y(t) = b_1*y(t-1) + b_2*Jobs + b_3*Welfare & Unemployment +  b_{0} +e(t) </div> 
     
 So if we train the models for the time period from 2011 to 2020 and we predict for the same period we get :
 
