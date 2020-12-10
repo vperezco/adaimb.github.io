@@ -66,11 +66,21 @@ Who remembers blu-rays? This technology was used for a period, but nowadays with
 <br>
 <br>
 
-According to Google searches of the term 'Blu-ray Disc' in all countries, we can see that the popularity of blu-ray discs was the highest in 2009/2010, few years after its launch, but decreases continuously since these years 
+According to Google searches of the term 'Blu-ray Disc' in all countries, we can see that the popularity of blu-ray discs was the highest in 2009/2010, few years after its launch, but decreases continuously since these years because of the emergence of new streaming devices such as Netflix. 
 
 ![Image](../img/Bluray-netflix.jpg)
 <br>
 <br>
+
+It is really cool, isn't it ? 
+
+However, manipulating google Trends could be **tricky**... Indeed, what there are thousand of possible search terms related to a subject, that differs by the formulation, the orthograph etc... So we have to be very careful when it comes to pick a search term to relate it to a phenomenon. Taking the example of the queries related to Employment in France we have the following volume of queries for three different search terms : 
+
+![Image](../img/Google_searches.jpg)
+<br>
+<br>
+
+We can see that depending on the word, the volume of queries differ A LOT. 
 
 <a name="story"></a> 
 # 2. A data story
@@ -100,17 +110,17 @@ We will now show that it is possible to predict the unemployment rate for the ne
 This model is like a linear regression, but instead of predicting the response (here the initial claims for unemployment benefits) with other observations that might be related to the response , we will predict our response basing us on previous observations of this same observation. So we have the following relation: 
 
 
-<div align="center"> y(t) = b_1*y(t-1) + b_0 +e(t)  </div>
+<div align="center"> y(t) = b1*y(t-1) + b0 +e(t)  </div>
     
-where $b_{1}$ and $b_{0}$ are the coefficients obtained fitting the model. We will call this the base model. We will train this model for the period between 2011 and 2020.
+where *b1* and *b0* are the coefficients obtained fitting the model. We will call this the base model. We will train this model for the period between 2011 and 2020.
 
 Once we have this model, it's time to play with the Google Trends ! 
 
-We are using here the trends $Local/Jobs$ and $Society/Social Services/Welfare & Unemployment$ for 2 reasons. The first one, these are categories, that means that they identify all the queries that are related to $Jobs$ and $Welfare & Unemployment$ so we don't have the problem of not taking the right search term to predict the response. The second is that these categories have been identified to be the most useful for this subject. 
+We are using here the trends *Local/Jobs* and *Society/Social Services/Welfare & Unemployment* for 2 reasons. The first one, these are categories, that means that they identify all the queries that are related to *Jobs* and *Welfare & Unemployment* so we don't have the problem of not taking the right search term to predict the response. The second is that these categories have been identified to be the most useful for this subject. 
 
 The trends model look like this : 
 
-<div align="center"> y(t) = b_1*y(t-1) + b_2*Jobs + b_3*Welfare & Unemployment +  b_{0} +e(t) </div> 
+<div align="center"> y(t) = b1*y(t-1) + b2*Jobs + b3*Welfare & Unemployment +  b0 +e(t) </div> 
     
 So if we train the models for the time period from 2011 to 2020 and we predict for the same period we get :
 
