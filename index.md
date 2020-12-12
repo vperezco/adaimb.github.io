@@ -156,8 +156,10 @@ FIGURE
 
 
 <a name="drop"></a> 
-## 3.B. Can we predict the financial drops ?
-MAE ONLY FOR THE RECESSION OF 2008 
+## 3.B. Let's take a look at the financial drops ?
+-2008
+-2009 (increase) - 2010 (decrease)
+-2013 (increase) - 2014 (decrease)
 
 Can we use the google trends model to predict financial recession?
 
