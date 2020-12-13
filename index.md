@@ -80,7 +80,7 @@ However, manipulating google Trends could be **tricky**... Indeed, what there ar
 <br>
 <br>
 
-We can see that depending on the word, the volume of queries differ A LOT. 
+We can see that depending on the word, the volume of queries differ A LOT. That is why it is better when it comes to pick google trends to select categories or subjects rather than search terms, because they will group different search terms and we don't risk to pick a search term that has not a lot of queries. 
 
 <a name="story"></a> 
 # 2. A data story
@@ -96,16 +96,13 @@ To interpret this, it could be interesting to use Google Trends to predict these
 <a name="curse"></a> 
 ## 2.A. The curse of unemployment
 
+Can we predict how many people won't have a job tomorrow and will ask for unemployment benefits ? Well, we will try to !
 
-![Image](../img/Initial-claims2004:2011.jpg)
-<br>
-<br>
+**Forecasting** is a technique that uses historical data as inputs to make informed estimates that are predictive in **determining the direction of future trends**. Businesses utilize forecasting to determine how to allocate their budgets or plan for anticipated expenses for an upcoming period of time. This is typically based on the projected demand for the goods and services offered. Forecasting is often based upon a **specific period** (the passage of the next 12 months) but also on the **occurrence of an event**, which could be reflected by the Google Trends.
 
+We are using here a simple model called *Linear Autoregressive Model* 
 
-<a name="job"></a> 
-## 2.B. Will we ever get a job some day?
-
-We will now show that it is possible to predict the unemployment rate for the next months, in other words we could almost say that we are trying to predict the rate of people who do not have a very great life at the moment. In order to do this, we will build a linear autoregressive model. Are you lost because you don't know what that is ? Don't worry, we will give some more details. 
+Are you lost because you don't know what that is ? Don't worry, we will give some more details. 
 
 This model is like a linear regression, but instead of predicting the response (here the initial claims for unemployment benefits) with other observations that might be related to the response , we will predict our response basing us on previous observations of this same observation. So we have the following relation: 
 
@@ -122,8 +119,35 @@ The trends model look like this :
 
 <div align="center"> y(t) = b1*y(t-1) + b2*Jobs + b3*Welfare & Unemployment +  b0 +e(t) </div> 
     
-So if we train the models for the time period from 2011 to 2020 and we predict for the same period we get :
+Now, we will train both models for the period from 2004 to 2011 and predict the initial claims for the same period and we get: 
 
+![Image](../img/Initial-claims2004:2011.jpg)
+<br>
+<br>
+
+It's crazy how the predictions are close to the true observation, right ? And we can go further and compute the improvement of the trends model, and the result is that Google Trends improve the predictions about **0.53%**. We have not an extraordinary improvement, but it is a good start. Furthermore, we can **optimize** the model in funciton of two parameters: 
+
+- The type of seasonal terms 
+- The set to train the model
+
+We are going to predict the overall initial claims by using different seasonal terms and find out what are their impact on the prediction accuracy. We are also going to change the size of the traininig set using a **rolling window**. The principle a rolling window is to use a certain number k of previous observations to train the model predict the next one. 
+
+![Image](../img/seasonal_terms.jpg)
+<br>
+<br>
+
+
+![Image](../img/rolling_windows.jpg)
+<br>
+<br>
+
+We can see for our initial claims data set that the model using the observations from eight months and using a rolling window of size 3 gives us a better prediction and achieve an overall improvement of **83%**. We can conclude from this that manipulate these parameters to assert which one is more appropriate for our dataset is essential and it is specific to the data itself. 
+
+<a name="job"></a> 
+## 2.B. Will we ever get a job some day?
+
+We will now show that it is possible to predict the unemployment rate for the next months, in other words we could almost say that we are trying to predict the rate of people who do not have a very great life at the moment. 
+So if we train the models for the time period from 2011 to 2020 and we predict for the same period we get :
 
 ![Image](../img/iclaims2011-2020.jpg)
 
