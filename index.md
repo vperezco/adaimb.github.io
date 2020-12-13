@@ -162,12 +162,26 @@ However, now can the fact of predicting over a period in which we already know t
 
 Our base and trends models is now trained for the observations from 2011 until December 2019, and our prediction period will be from January 2020 to November 2020. 
 
-// GRAPH OF THE PREDICTION HERE
+![Image](../img/forecast2020.jpg)
+
+<br>
+<br>
 
 Predicting with an out-of-sample forecast gives an improvement of **28.24%** for the trends model compared to the base model. We can clearly see this improvement in the graph, and we can conclude that the base model didn't foreseen this pick coming ! So that clearly proves that for out-of-sample forecasting, base models are not very reliables... However, even if the trends model is not perfect, it somehow managed to predict this crisis due to the actual pandemic. **Why is that ?**
 
 Looking at the ANOVA tables of both models, we see that the coefficient for the s1 feature is really small compared to the intercept and the trends features, and its p-value is above 0.05 which means that this term is not very significative to predict the response. That's could be why the trends model performs better. 
 
+Can we go further ? As this big increase in 2020 is clearly related to the current pandemic, maybe using google trends related to Covid-19 might help us to improve the prediction! Yes, we know, you're tired to hear about Covid, but it is for a good cause! 
+The idea is to integrate the Google searchis related to Covid-19 and find out if the prediction is better, because these two curves have to following pattern which is very simimilar: 
+
+![Image](../img/Trends_covid.jpg)
+
+<br>
+<br>
+
+And, effectively, the improvement of the trends model compared to the base model is about **29.52%** (and we had before an improvement of 28.34% without the covid trend). **We can conclude that it not improves dramatically the predictions, but it does help a little.**
+
+However, Google trends are very useful to predict anormal events that are related to a crisis or particular societal events. 
 
 <a name="exchange"></a> 
 # 3. How do I get the best exchange rate ?
