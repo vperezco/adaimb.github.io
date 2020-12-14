@@ -185,19 +185,91 @@ However, Google trends are very useful to predict anormal events that are relate
 
 <a name="exchange"></a> 
 # 3. How do I get the best exchange rate ?
-
+In this part, we will tell another very interesting data story, the one about exchange rates. More particulary, we will be interest in the US/Euro exchange rate (which is currently set to 1.22). 
+Exchange rates are more than just a numerical conversion between currencies. They are a direct consequence, sometimes even trigger elements, to major political and economical time periods. 
 <a name="model"></a> 
 ## 3.A. Google Trends and the forecasting performance of exchange rate models
-EXPLAIN THE MODEL (WHAT TRENDS, WHY ONLY ONE SEASONAL TERM ETC...)
-TABLE WITH MAES, EXPLANATION
-FIGURE 
+In order to conduct our study of this data set, we used work done by ... their paper ....
+In this paper, the authors used Google Trends data for exchange rate forecasting and took a sample which covered 11 OECD countries exchange rates for the period from January 2004 to June 2014. By performing an out-of-sample forecasting of monthly returns on exchange rates, they found that Google Trends search query data seemed to do a better job than the structural models in predicting the true direction of changes in nominal exchange rates. 
+Let's try and see if we come to the same conclusion...
+
+We decided to work only on the US/EU exchange rate whereas the authors of the paper worked on exchange rates for various world currencies. 
+
+The first question which comes to our minds is the following : what model are we going to use ?
+We decided to rely on the model used in the paper, which is a simple linear regression with one seasonal term $y_{t-1}$ and the different trends found which are related to the variable predicted. 
+<div align="center"> y(t) = b1*y(t-1) + sum(bi*Trend_i)  b0 +e(t) </div> 
+
+We will in addition, use an increasing rolling window with an initial size of 10. 
+This model, of course, is meant to be compared to a base model as in the first part of this extension. 
+
+Now that the choice of the model has been established, we must choose the trends we are going to use ?
+In the paper, they suggested a list of fifteen query words which can be fitted in the model. We considered that using four of them would be enough to get a good prediction and we chose the following ones : *Inflation*,*Prices*,*CPT* and *Cheap*. 
+
+We began to work with five data sets. One of them is simply the US/EU exchange rate dataset for the last twenty years and the four other ones correspond to the chosen Google Trends. Each of these four data sets contain the number of queries for the four trends in a specific country, the US and 3 major European countries/regions (Great Britain, Germany, France).
+
+### Preprocessing work
+As each of these four datasets correspond to a specific countries, the features names were not all in English. Therefore, a preprocessing task was to translate all the features names of those datasets in English.
+
+Some columns of those datasets as *Inflation* and *CPI* contained string values as <1. As the other values in those columns were generally much bigger, we considered that a value of <1 corresponded to 0. 
+
+Since our goal is to work on the US/EU rate in general, meaning that we consider the EURO zone as a single zone we did averaged those three European countries datasets and we used the result dataset as our European dataset. 
+
+Finally we created our final dataset. In this dataset, we considered that the trends columns would be the difference between the number of queries in the US and the number of queries in Europe. Indeed, we considered that the difference between the two world regions would be more relevant for our analysis. It will allow to really see where between the US or in Europe, a query for a specific Google trend has increased. 
+After that, we merged the US/EU exchange rate obtained on the internet and the "differentiated" Google trends dataset. 
+
+Now the real analysis can begin !
+
+Let's recap the model we will use here : 
+Trends model : 
+<div align="center"> y(t) = b1*y(t-1) + b2*deltaInflation + b3*deltaPrices + b4*deltaCPI + b5*deltaCheap + b0 +e(t) </div> 
+Base model : 
+<div align="center"> y(t) = b1*y(t-1) + b0 +e(t) </div> 
+
+As previously mentioned, the type of forecasting we perform is an out of sample one and we use an increasing rolling window of initial size 10. 
+We considered this size of rolling window enough since we only have one seasonal term at time (t-1). 
+ON PEUT EXPLIQUER PLUS ICI MAIS BESOIN DE RECHECKER AVEC DATAWIZARD DAVID. 
+
+So, we train both models with a sample of fixed size and we predict the next value. The size of the sample increases at every incrementation, therefore, at the end all values have been predicted. 
+By training both models for the overall period from 1999 to 2020 and predict the US/EU exchange rate for the same period and we get the following results :
+
+DEJA MIS EN LOG AU DEBUT ????
+METTRE FIGURE, LA RENDRE UN PEU PLUS GLAMOUR. 
+
+By looking at this figure, you may think that the predictions made by the Google Trends are not very good. Well, let's take a closer look at the figure. 
+We notice that on the increasing portions of the figure, the predictions made by the trends model seem to fit the actual data very closely whereas on the decreasing portions of the figure, the predictions are completely false. 
+We will try and explain this observation later on. 
+
+When computing the improvement of the trends model, we get that Google Trends improve the predictions by 8.75 %. This is far from insignificant and it is consistent with the assumption that Google trends greatly improve the US/EU exchange rate forecasting. 
+
+
+EST CE QUE JE PARLE DE LA MAE SANS ROLLING WINDOW PARCE QUE JE TROUVE PAS LES PREDICTIONS DANS LE CODE 
 
 
 <a name="drop"></a> 
 ## 3.B. Let's take a look at the financial drops ?
--2008
--2009 (increase) - 2010 (decrease)
--2013 (increase) - 2014 (decrease)
+The interesting thing here is to look at the drops on the figure. 
+There are three very noticable drops, one in 2008 (this one seems obvious), one in 2010 and one in 2014. 
+
+What happenend during those three time periods ?
+- 2008 : The dollar strengthened by 22% as businesses hoarded dollars during the global financial crisis. By year’s end, the euro was worth $1.39. Since the euro crashed (the euro was worth $1.44 in December 2007 !), the US/EU rate decreased dramatically.
+
+- 2010 : the Greek debt crisis strengthened the dollar. Remember, the Greek debt crisis is the dangerous amount of sovereign debt Greece owed the European Union between 2008 and 2018. In 2010, Greece said it might default on its debt, threatening the viability of the eurozone itself. By year’s end, the euro was only worth $1.32. Since the euro crashed, the US/EU rate decreased dramatically (euro currency was getting cheaper to buy). 
+
+-2014 : The euro-to-dollar exchange rate fell to $1.21 thanks to investors fleeing the euro. Hopes for a sustained rebound in Europe have been dashed by anemic economic readings and up-and-down tensions with Russia over the future of Ukraine. Europe faced what was called the Putin effect which is when Russia responded to U.S. and European sanctions with sanctions of its own, including ones banning the import of food from Europe for a year.
+
+
+What about the sudden increase before those drops : 
+- 2007 : The dollar fell by 40% as the U.S. debt grew by 60%. Since the dollar crashed, the US/EU rate increased dramatically. Indeed one euro was worth a bigger and bigger amount of dollars since it was considered as the safer currency. 
+
+- 2009 : The dollar fell by 20% thanks to debt fears. By December, the euro was worth $1.43. US/EURO dollar (the euro is more expensive because it is considered as a good currency). Again, since the dollar crashed, the US/EU exchange rate increased dramatically.
+
+- 2013 : The dollar lost value against the euro, as it appeared at first that the European Union was, at last, solving the eurozone crisis. By December, it was worth $1.38. Again, since the dollar lost value, the US/EU exchange rate increased.
+
+
+By predicting the US/EU exchange rate only on those specific periods, we get very interesting MAE values. 
+
+MAE + NOUVELLES FIGS 
+
 
 Can we use the google trends model to predict financial recession?
 
