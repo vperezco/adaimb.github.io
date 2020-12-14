@@ -255,7 +255,7 @@ What happenend during those three time periods ?
 
 - 2010 : the Greek debt crisis strengthened the dollar. Remember, the Greek debt crisis is the dangerous amount of sovereign debt Greece owed the European Union between 2008 and 2018. In 2010, Greece said it might default on its debt, threatening the viability of the eurozone itself. By year’s end, the euro was only worth $1.32. Since the euro crashed, the US/EU rate decreased dramatically (euro currency was getting cheaper to buy). 
 
--2014 : The euro-to-dollar exchange rate fell to $1.21 thanks to investors fleeing the euro. Hopes for a sustained rebound in Europe have been dashed by anemic economic readings and up-and-down tensions with Russia over the future of Ukraine. Europe faced what was called the Putin effect which is when Russia responded to U.S. and European sanctions with sanctions of its own, including ones banning the import of food from Europe for a year.
+- 2014 : The euro-to-dollar exchange rate fell to $1.21 thanks to investors fleeing the euro. Hopes for a sustained rebound in Europe have been dashed by anemic economic readings and up-and-down tensions with Russia over the future of Ukraine. Europe faced what was called the Putin effect which is when Russia responded to U.S. and European sanctions with sanctions of its own, including ones banning the import of food from Europe for a year.
 
 
 What about the sudden increase before those drops : 
