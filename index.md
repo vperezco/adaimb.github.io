@@ -221,18 +221,17 @@ Now the real analysis can begin !
 
 Let's recap the model we will use here : 
 Trends model : 
+<div $ $ x = {-b \pm \sqrt{b^2 – 4ac}\over 2a} $ $ </div> 
 <div align="center"> y(t) = b1*y(t-1) + b2*deltaInflation + b3*deltaPrices + b4*deltaCPI + b5*deltaCheap + b0 +e(t) </div> 
 Base model : 
 <div align="center"> y(t) = b1*y(t-1) + b0 +e(t) </div> 
 
 As previously mentioned, the type of forecasting we perform is an out of sample one and we use an increasing rolling window of initial size 10. 
 We considered this size of rolling window enough since we only have one seasonal term at time (t-1). 
-ON PEUT EXPLIQUER PLUS ICI MAIS BESOIN DE RECHECKER AVEC DATAWIZARD DAVID. 
 
 So, we train both models with a sample of fixed size and we predict the next value. The size of the sample increases at every incrementation, therefore, at the end all values have been predicted. 
 By training both models for the overall period from 1999 to 2020 and predict the US/EU exchange rate for the same period and we get the following results :
 
-DEJA MIS EN LOG AU DEBUT ????
 METTRE FIGURE, LA RENDRE UN PEU PLUS GLAMOUR. 
 
 By looking at this figure, you may think that the predictions made by the Google Trends are not very good. Well, let's take a closer look at the figure. 
@@ -241,8 +240,9 @@ We will try and explain this observation later on.
 
 When computing the improvement of the trends model, we get that Google Trends improve the predictions by 8.75 %. This is far from insignificant and it is consistent with the assumption that Google trends greatly improve the US/EU exchange rate forecasting. 
 
+In order to get another comparison basis, we predicted our data without a rolling window. Since, it is in-sample forecasting, it is not as relevant as the first predictions. However, we still can see that the trends model gives us a better prediction than the base model since the MAE improvement is around 1.5 %. 
 
-EST CE QUE JE PARLE DE LA MAE SANS ROLLING WINDOW PARCE QUE JE TROUVE PAS LES PREDICTIONS DANS LE CODE 
+METTRE FIGURE
 
 
 <a name="drop"></a> 
@@ -263,12 +263,58 @@ What about the sudden increase before those drops :
 
 - 2009 : The dollar fell by 20% thanks to debt fears. By December, the euro was worth $1.43. US/EURO dollar (the euro is more expensive because it is considered as a good currency). Again, since the dollar crashed, the US/EU exchange rate increased dramatically.
 
-- 2013 : The dollar lost value against the euro, as it appeared at first that the European Union was, at last, solving the eurozone crisis. By December, it was worth $1.38. Again, since the dollar lost value, the US/EU exchange rate increased.
+- 2013 : The dollar lost value against the euro, as it appeared at first that the European Union was, at last, solving the eurozone crisis. By December, it was worth $1.38. Due of the lost of value of the dollar, the US/EU exchange rate increased.
 
 
 By predicting the US/EU exchange rate only on those specific periods, we get very interesting MAE values. 
 
-MAE + NOUVELLES FIGS 
+2008 crash : 
+The MAE improvement before the crash is about -2.73 % whereas the MAE improvement during the crash is about -4.44 %. Even though those improvements values tell us that the trends models did not really improve the predictions for the 2008 crash, we can still clearly see that the prediction before the crash is much better than the prediction during the crash. 
+
+FIGURE
+
+2010 crash : 
+For this time period, the difference between the MAE improvement before and during the crash is quite striking. Indeed, the MAE improvement before the crash is roughly 48 % whereas the MAE improvement after the crash is -41.05 %. 
+
+FIGURE 
+
+2014 crash : 
+Here, the difference between the MAE improvement before and during the crash strikes us as well. The MAE improvement before the crash is roughly 14.7 % whereas the MAE improvement after the crash is -25.22 %. 
+ 
+FIGURE 
+
+
+
+Why would our model predict better before the crash rather than during ? 
+First of all, let's think about the variation of our trends before and during the crashes. 
+As mentionned before, when the exchange rate increases, it means that the dollar has crashed. The import in the US becomes very expensive, people lose their purchasing power, they can afford foreign products anymore or to travel. Therefore, it seems logical that people in the US would inquiry more terms like *Prices*,*Inflation* etc... 
+If this is the case, then the difference between the US queries and the European queries would increase.
+On the other hand, during all of the concerned crashes, the EU currency has crashed. As a consequence, the exchange rate has decreased. In that case, it is the import cost in Europe that becomes higher, the people loose their purchasing power and they do not have the financial means to travel anymore. Here, it seems logical that the European people would inquire more terms like *Prices*,*Inflation* etc... 
+Therefore, the difference between the US queries and the European queries would decrease. 
+
+Now how is this related to the fact that our model predicts better before the crash rather than during ?
+Well since they are more increasing parts than decreasing parts in our dataset, our model is mostly trained on increasing parts. Thus, the coefficients attibuted to the features are trained such that the exchange rate should be relatively high. Moreover, the drops are ponctual, the model is then less kean to set the coefficients based on these events. 
+
+The next step of our work was to try and see which trend had the greater influence on the predictions. 
+What we want to do here is to improve the prediction over the drop periods using the google trends. A way to do so is to analyse the correlation between the exchange rate and the trends over the crash periods. A negative correlation would indicate that the trend impacts negatively the prediction, i.e if the exchange rate drop the queries for the trends in Europe increases compared to US. Thus, using the correlation we may find trends that are the most likely to predict accurately the drops.
+
+Here are the results of the correlation between each trend and the US/EU exchange rate for the 2008 crash (during the crash) : 
+
+FIGURE
+
+The trend *Inflation* is positively correlated to the exchange rate uring this drop period. We are going to try to conserve only this feature for the prediction of drops to see if we can get a better improvement compared to the baseline model.
+
+TABLEAU
+
+We can see that for the 2008 and the 2010 crash, the MAE improvement is positive (they were negative before). This tells us that the trends model predictions are much better. 
+The MAE improvement for the 2014, still remains negative. However it is "less" negative than before (remember the MAE improvement during the crash was equal to -25.22 %). 
+Lastly, we tried to make the predictions without the trend *Inflation* (just for the 2008 crash) to see how the MAE scores changed. The MAE improvement before the crash is roughly -2.73 % whereas the MAE improvement during the crash is -7.24 %. This value is much worse than the one we got when prediction only with the *Inflation* trend. 
+Thus, we can conclude that the *Inflation* trend is the most acurate and important trend and removing the others greatly improves our model predictions.
+
+
+
+
+
 
 
 Can we use the google trends model to predict financial recession?
