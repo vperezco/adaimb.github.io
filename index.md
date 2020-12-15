@@ -221,7 +221,6 @@ Now the real analysis can begin !
 
 Let's recap the model we will use here : 
 Trends model : 
-<div $ $ x = {-b \pm \sqrt{b^2 – 4ac}\over 2a} $ $ </div> 
 <div align="center"> y(t) = b1*y(t-1) + b2*deltaInflation + b3*deltaPrices + b4*deltaCPI + b5*deltaCheap + b0 +e(t) </div> 
 Base model : 
 <div align="center"> y(t) = b1*y(t-1) + b0 +e(t) </div> 
