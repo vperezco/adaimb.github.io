@@ -156,10 +156,10 @@ So if we train the models for the time period from 2011 to 2020 and we predict f
 <br>
 
 
-The first thing that we notice is 2020, this sudden increase in the unemployment initial claims. What happened here ? I mean, during the recession there also was an increase where the log of claims reached 14, but here its reaching almost 17 ! And it is safe to say that this might be due to the pandemic. 
+The first thing that we notice is 2020, this **sudden increase in the unemployment initial claims**. What happened here ? I mean, during the recession there also was an increase where the log of claims reached 14, but here its reaching almost 17 ! And it is safe to say that this might be due to the pandemic. 
 Looking now at the predictions, can see here that the **trends model improves the prediction about 19.54% on the overall period and about 42.96% in 2020**. From this we can conclude that the trends model helps to improve the predictions compared to the base model. 
 
-However, now can the fact of predicting over a period in which we already know the ins and outs be useful? In real life, when we try to forecast, we don't know the response because it's what we are searching ! So now, we are in december 2019, the New Year comes, everybody is asking you what are you plans for 2020, and you know exactly what it is... your plans for 2020 are to predict the unemployment initial claims ! Will Google trends help you to build a solid prediction for 2020 ? That's what we are going to find out !
+However,it is very useful to predict a period in which we already know the ins and outs ? In real life, when we try to forecast, **we don't know the response because it's what we are searching !** So now, we are in december 2019, the New Year comes, everybody is asking you what are you plans for 2020, and you know exactly what it is... your plans for 2020 are to predict the unemployment initial claims ! Will Google trends help you to build a solid prediction for 2020 ? That's what we are going to find out !
 
 Our base and trends models is now trained for the observations from 2011 until December 2019, and our prediction period will be from January 2020 to November 2020. 
 
@@ -186,18 +186,18 @@ However, Google trends are very useful to predict anormal events that are relate
 
 <a name="exchange"></a> 
 # 3. How do I get the best exchange rate ?
-In this part, we will tell another very interesting data story, the one about exchange rates. More particulary, we will be interest in the US/Euro exchange rate (which is currently set to 1.22). 
+In this part, we will tell another very interesting data story, the one about exchange rates. More particulary, **we will be interest in the US/Euro exchange rate** (which is currently set to 1.22). 
 Exchange rates are more than just a numerical conversion between currencies. They are a direct consequence, sometimes even trigger elements, to major political and economical time periods. 
 <a name="model"></a> 
 ## 3.A. Google Trends and the forecasting performance of exchange rate models
 In order to conduct our study of this data set, we used work done by ... their paper ....
-In this paper, the authors used Google Trends data for exchange rate forecasting and took a sample which covered 11 OECD countries exchange rates for the period from January 2004 to June 2014. By performing an out-of-sample forecasting of monthly returns on exchange rates, they found that Google Trends search query data seemed to do a better job than the structural models in predicting the true direction of changes in nominal exchange rates. 
+In this paper, the authors used Google Trends data for exchange rate forecasting and took a sample which covered 11 OECD countries exchange rates for the period from January 2004 to June 2014. By performing an **out-of-sample forecasting of monthly returns on exchange rates**, they found that Google Trends search query data seemed to do a better job than the structural models in predicting the true direction of changes in nominal exchange rates. 
 Let's try and see if we come to the same conclusion...
 
 We decided to work only on the US/EU exchange rate whereas the authors of the paper worked on exchange rates for various world currencies. 
 
 The first question which comes to our minds is the following : what model are we going to use ?
-We decided to rely on the model used in the paper, which is a simple linear regression with one seasonal term $y_{t-1}$ and the different trends found which are related to the variable predicted. 
+We decided to rely on the model used in the paper, which is a simple **linear regression with one seasonal term $y_{t-1}$ and the different trends found which are related to the variable predicted. **
 
 ![Image](../img/Formula1.png)
 <div align="center"> y(t) = b1*y(t-1) + sum(bi*Trend_i)  b0 +e(t) </div> 
@@ -205,7 +205,7 @@ We decided to rely on the model used in the paper, which is a simple linear regr
 We will in addition, use an increasing rolling window with an initial size of 10. 
 This model, of course, is meant to be compared to a base model as in the first part of this extension. 
 
-Now that the choice of the model has been established, we must choose the trends we are going to use ?
+Now that the choice of the model has been established, **we must choose the trends we are going to use ?**
 In the paper, they suggested a list of fifteen query words which can be fitted in the model. We considered that using four of them would be enough to get a good prediction and we chose the following ones : *Inflation*,*Prices*,*CPT* and *Cheap*. 
 
 We began to work with five data sets. One of them is simply the US/EU exchange rate dataset for the last twenty years and the four other ones correspond to the chosen Google Trends. Each of these four data sets contain the number of queries for the four trends in a specific country, the US and 3 major European countries/regions (Great Britain, Germany, France).
@@ -235,16 +235,16 @@ Base model :
 As previously mentioned, the type of forecasting we perform is an out of sample one and we use an increasing rolling window of initial size 10. 
 We considered this size of rolling window enough since we only have one seasonal term at time (t-1). 
 
-So, we train both models with a sample of fixed size and we predict the next value. The size of the sample increases at every incrementation, therefore, at the end all values have been predicted. 
+**So, we train both models with a sample of fixed size and we predict the next value.** The size of the sample increases at every incrementation, therefore, at the end all values have been predicted. 
 By training both models for the overall period from 1999 to 2020 and predict the US/EU exchange rate for the same period and we get the following results :
 
 METTRE FIGURE, LA RENDRE UN PEU PLUS GLAMOUR. 
 
-By looking at this figure, you may think that the predictions made by the Google Trends are not very good. Well, let's take a closer look at the figure. 
+By looking at this figure, you may think that the predictions made by the **Google Trends are not very good.** Well, let's take a closer look at the figure. 
 We notice that on the increasing portions of the figure, the predictions made by the trends model seem to fit the actual data very closely whereas on the decreasing portions of the figure, the predictions are completely false. 
 We will try and explain this observation later on. 
 
-When computing the improvement of the trends model, we get that Google Trends improve the predictions by 8.75 %. This is far from insignificant and it is consistent with the assumption that Google trends greatly improve the US/EU exchange rate forecasting. 
+When computing the improvement of the trends model, we get that Google Trends improve the predictions by **8.75 %.** This is far from insignificant and it is consistent with the assumption that Google trends greatly improve the US/EU exchange rate forecasting. 
 
 In order to get another comparison basis, we predicted our data without a rolling window. Since, it is in-sample forecasting, it is not as relevant as the first predictions. However, we still can see that the trends model gives us a better prediction than the base model since the MAE improvement is around 1.5 %. 
 
@@ -291,7 +291,7 @@ FIGURE
 
 
 
-Why would our model predict better before the crash rather than during ? 
+**Why would our model predict better before the crash rather than during ?** 
 First of all, let's think about the variation of our trends before and during the crashes. 
 As mentionned before, when the exchange rate increases, it means that the dollar has crashed. The import in the US becomes very expensive, people lose their purchasing power, they can afford foreign products anymore or to travel. Therefore, it seems logical that people in the US would inquiry more terms like *Prices*,*Inflation* etc... 
 If this is the case, then the difference between the US queries and the European queries would increase.
@@ -317,12 +317,13 @@ The MAE improvement for the 2014, still remains negative. However it is "less" n
 Lastly, we tried to make the predictions without the trend *Inflation* (just for the 2008 crash) to see how the MAE scores changed. The MAE improvement before the crash is roughly -2.73 % whereas the MAE improvement during the crash is -7.24 %. This value is much worse than the one we got when prediction only with the *Inflation* trend. 
 Thus, we can conclude that the *Inflation* trend is the most acurate and important trend and removing the others greatly improves our model predictions.
 
-
-
-
-
-
-
 Can we use the google trends model to predict financial recession?
+
+# Conclusion 
+
+Through this data story, we have learned many things about forecasting the present with Google Trends. First, we've learned how optimize the parameters in order to improve the prediction of an observation for the next few months with out-of-sample forecasting, which seems to be a very promising tool to upgrade the forcasting using autoregressive terms. Then, we have seen that how to manipulate Google terms and to what extend some of them are useful for this type of models, as we must pay attention to the popularity of the search terms that we want to use in order to get better results. Finally, we have seen the limits of these models, as the use of Google trends seems to improve the performance when the observations follows a certain allure (like an sudden increase). In fine, we have made a generalization of foreacasting methods using Google Trends and we have seen through a very specific example that these kind of models are useful even when the observations are kind of unpredicable as they are somehow related to particular events and contexts that are reflected in Google Trends data. 
+
+
+
 
 [//]:#(---------- END OF WHAT IS VISIBLE ----------------)
