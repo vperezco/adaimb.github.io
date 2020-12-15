@@ -106,7 +106,7 @@ Are you lost because you don't know what that is ? Don't worry, we will give som
 
 This model is like a linear regression, but instead of predicting the response (here the initial claims for unemployment benefits) with other observations that might be related to the response , we will predict our response basing us on previous observations of this same observation. So we have the following relation: 
 
-
+![Image](Formula3.jpg)
 <div align="center"> y(t) = b1*y(t-1) + b0 +e(t)  </div>
     
 where *b1* and *b0* are the coefficients obtained fitting the model. We will call this the base model. We will train this model for the period between 2011 and 2020.
@@ -117,6 +117,7 @@ We are using here the trends *Local/Jobs* and *Society/Social Services/Welfare &
 
 The trends model look like this : 
 
+![Image](Formula4.jpg)
 <div align="center"> y(t) = b1*y(t-1) + b2*Jobs + b3*Welfare & Unemployment +  b0 +e(t) </div> 
     
 Now, we will train both models for the period from 2004 to 2011 and predict the initial claims for the same period and we get: 
@@ -197,6 +198,8 @@ We decided to work only on the US/EU exchange rate whereas the authors of the pa
 
 The first question which comes to our minds is the following : what model are we going to use ?
 We decided to rely on the model used in the paper, which is a simple linear regression with one seasonal term $y_{t-1}$ and the different trends found which are related to the variable predicted. 
+
+![Image](Formula1.jpg)
 <div align="center"> y(t) = b1*y(t-1) + sum(bi*Trend_i)  b0 +e(t) </div> 
 
 We will in addition, use an increasing rolling window with an initial size of 10. 
@@ -221,8 +224,10 @@ Now the real analysis can begin !
 
 Let's recap the model we will use here : 
 Trends model : 
+![Image](Formula2.jpg)
 <div align="center"> y(t) = b1*y(t-1) + b2*deltaInflation + b3*deltaPrices + b4*deltaCPI + b5*deltaCheap + b0 +e(t) </div> 
 Base model : 
+![Image](Formula3.jpg)
 <div align="center"> y(t) = b1*y(t-1) + b0 +e(t) </div> 
 
 As previously mentioned, the type of forecasting we perform is an out of sample one and we use an increasing rolling window of initial size 10. 
