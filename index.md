@@ -60,7 +60,7 @@ It combines all of queries into a unique measure of popularity and scales their 
 
 We will take a simple example to illustrate the previous section and show how Google Trends are strongly connected to our present. 
 
-Who remembers blu-rays? This technology was used for a period, but nowadays with the emergence of streaming devices such as Netflix, you will probably make fun of someone asks you to watch a blu-ray with him. With Google trends, we can see the when was the golden age of blu-rays, as that and when it began to collapse. 
+**Who remembers blu-rays?** This technology was used for a period, but nowadays with the emergence of streaming devices such as Netflix, you will probably make fun of someone asks you to watch a blu-ray with him. With Google trends, we can see the when was the golden age of blu-rays, as that and when it began to collapse. 
 
 ![Image](../img/Bluray.jpg)
 <br>
@@ -74,21 +74,21 @@ According to Google searches of the term 'Blu-ray Disc' in all countries, we can
 
 It is really cool, isn't it ? 
 
-However, manipulating google Trends could be **tricky**... Indeed, what there are thousand of possible search terms related to a subject, that differs by the formulation, the orthograph etc... So we have to be very careful when it comes to pick a search term to relate it to a phenomenon. Taking the example of the queries related to Employment in France we have the following volume of queries for three different search terms : 
+However, manipulating google Trends could be **tricky**... Indeed, what there are **thousand of possible search terms related to a subject**, that differs by the formulation, the orthograph etc... So we have to be very careful when it comes to pick a search term to relate it to a phenomenon. Taking the example of the queries related to Employment (a subject that we will talk in detail soon) in France we have the following volume of queries for three different search terms : 
 
 ![Image](../img/Google_searches.jpg)
 <br>
 <br>
 
-We can see that depending on the word, the volume of queries differ A LOT. That is why it is better when it comes to pick google trends to select categories or subjects rather than search terms, because they will group different search terms and we don't risk to pick a search term that has not a lot of queries. 
+We can see that depending on the word, the **volume of queries differ A LOT**. That is why it is better when it comes to pick google trends to select categories or subjects rather than search terms, because they will group different search terms and we don't risk to pick a search term that has not a lot of queries. 
 
 <a name="story"></a> 
 # 2. A data story
 
 
-Nowadays, we can safely say that job search is one of the main concerns for today's young people. We're not talking about a funny subject here, sorry if it's your concern too, we didn't intend to remind you that you are jobless ^^.  Indeed, the world has entered a new demographic, geopolitical, economic and socio-cultural situation. In this world, employment is an essential element for functioning of industrial societies and of the place of individuals in social relation. 
+Nowadays, we can safely say that **job search is one of the main concerns for today's young people**. We're not talking about a funny subject here, sorry if it's your concern too, we didn't intend to remind you that you are jobless ^^.  Indeed, the world has entered a new demographic, geopolitical, economic and socio-cultural situation. In this world, employment is an essential element for functioning of industrial societies and of the place of individuals in social relation. 
 
-Even if today the society is well-evolved and most of the people benefits to be in good health, educated and trained to a high standard, a lot still struggle to find an employment and get inserted in the society. In this context, it could be interesting to analyze rates of unemployment initial claims to see how much people are searching a job and relate this to a specific period. But, why the unemployment initial claims are increasing or decreasing? 
+Even if today the society is well-evolved and most of the people benefits to be in good health, educated and trained to a high standard, a lot still struggle to find an employment and get inserted in the society. In this context, it could be interesting to **analyze rates of unemployment initial claims to see how much people are searching a job and relate this to a specific period**. But, why the unemployment initial claims are increasing or decreasing? 
 
 To interpret this, it could be interesting to use Google Trends to predict these observations and find out if they are somehow related to a societal elements (like an economic crisis, a pandemic etc...). The second goal is to see the how reliable this model is, if we can rely on these predictions to adapt political and economic decisions.
 
@@ -100,7 +100,7 @@ Can we predict how many people won't have a job tomorrow and will ask for unempl
 
 **Forecasting** is a technique that uses historical data as inputs to make informed estimates that are predictive in **determining the direction of future trends**. Businesses utilize forecasting to determine how to allocate their budgets or plan for anticipated expenses for an upcoming period of time. This is typically based on the projected demand for the goods and services offered. Forecasting is often based upon a **specific period** (the passage of the next 12 months) but also on the **occurrence of an event**, which could be reflected by the Google Trends.
 
-We are using here a simple model called *Linear Autoregressive Model* 
+We are using here a simple model called ***Linear Autoregressive Model*** 
 
 Are you lost because you don't know what that is ? Don't worry, we will give some more details. 
 
