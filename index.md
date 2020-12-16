@@ -8,7 +8,6 @@ use-site-title: true
 
 ![](../img/fabrizio-verrecchia-Ai7sV3SSMIQ-unsplash.jpg){: .align-center}
 
-![Alt Text](link)
 
 It has been common knowledge for quite some time that **Google**, amongst other companies, have a great influence on events. People were made even more aware of this influence, recently, during the 2016 American elections. 
 A group of researchers have recently developed a theory which states that Google Trends allow to predict the present. You must ask yourself, **how can we predict the present ?** The idea is to use Google Trends from previous weeks or months and see if those trends give us a good representation of what is happening right now. 
