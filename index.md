@@ -20,7 +20,7 @@ The  aim  of  the second part of our project was to study how Google Trends allo
 Some time period are of particularly interest to us, especially the 2007 recession period. Indeed, it is quite obvious that the economic indicators changed radically during this period, but it would be even more interesting to see if Google Trends of weeks/months preceding this period could partly explain the change in those economic indicators. 
 To help us on our project, we relied on a paper (reference) which carried a similar project and it allowed us to have an overview of the Google Trends we should look at. 
 
-![Alt Text](<iframe src="https://giphy.com/embed/TlK63EEFGiFuR1CXBMA" width="480" height="288" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/guytrefler-google-enlarge-TlK63EEFGiFuR1CXBMA">via GIPHY</a></p>)
+![Alt Text]("https://giphy.com/embed/TlK63EEFGiFuR1CXBMA")
 
 ## Structure:
 
