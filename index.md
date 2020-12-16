@@ -22,7 +22,7 @@ To help us on our project, we relied on a paper (reference) which carried a simi
 
 This page is structured in three sections:
 
-## Index
+## [Index](#index)
 1. [What are Google Trends](#trends)
     1. [What does Google Trends measure anyway?](#meaning)
     2. [Example: The rise and fall of the blu-ray](#bluray)
@@ -92,6 +92,7 @@ Even if today the society is well-evolved and most of the people benefits to be 
 
 To interpret this, it could be interesting to use Google Trends to predict these observations and find out if they are somehow related to a societal elements (like an economic crisis, a pandemic etc...). The second goal is to see the how reliable this model is, if we can rely on these predictions to adapt political and economic decisions.
 
+<a href="#index">Back to Index</a>
 
 <a name="curse"></a> 
 ## 2.A. The curse of unemployment
