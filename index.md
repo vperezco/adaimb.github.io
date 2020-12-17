@@ -194,14 +194,17 @@ In this part, we will tell another very interesting data story, the one about ex
 Exchange rates are more than just a numerical conversion between currencies. They are a direct consequence, sometimes even trigger elements, to major political and economical time periods. 
 <a name="model"></a> 
 ## 3.A. Google Trends and the forecasting performance of exchange rate models
-In order to conduct our study of this data set, we used work done by ... their paper ....
-In this paper, the authors used Google Trends data for exchange rate forecasting and took a sample which covered 11 OECD countries exchange rates for the period from January 2004 to June 2014. By performing an **out-of-sample forecasting of monthly returns on exchange rates**, they found that Google Trends search query data seemed to do a better job than the structural models in predicting the true direction of changes in nominal exchange rates. 
+In order to conduct our study of this data set, we used work done by Motoki Masuda and Fumiko Takeda at *Department of Technology Management for Innovation University of Tokyo* and Levent Bulut at *Department of Economics and Finance, Harley Langdale, Jr. College of Business Administration, Valdosta State University, Valdosta, GA 31698, USA* and their respective papers :
+- [Application of Google Trends Data in Exchange Rate Prediction](https://isf.forecasters.org/wp-content/uploads/gravity_forms/2-dd30f7ae09136fa695c552259bdb3f99/2019/06/Exchange-Rate.pdf)
+- [Google Trends and the forecasting performance of exchange rate models](https://onlinelibrary.wiley.com/doi/10.1002/for.2500)
+
+We mainly focused on the second paper in which, the authors used Google Trends data for exchange rate forecasting and took a sample which covered 11 OECD countries exchange rates for the period from January 2004 to June 2014. By performing an **out-of-sample forecasting of monthly returns on exchange rates**, they found that Google Trends search query data seemed to do a better job than the structural models in predicting the true direction of changes in nominal exchange rates. 
 Let's try and see if we come to the same conclusion...
 
 We decided to work only on the US/EU exchange rate whereas the authors of the paper worked on exchange rates for various world currencies. 
 
 The first question which comes to our minds is the following : what model are we going to use ?
-We decided to rely on the model used in the paper, which is a simple **linear regression with one seasonal term $y_{t-1}$ and the different trends found which are related to the variable predicted. **
+We decided to rely on the model used in the paper, which is a simple **linear regression with one seasonal term $y_{t-1}$ and the different trends found which are related to the variable predicted.**
 
 ![Image](../img/Formula1.png)
 <div align="center"> y(t) = b1*y(t-1) + sum(bi*Trend_i)  b0 +e(t) </div> 
