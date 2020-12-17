@@ -269,7 +269,7 @@ In order to get another comparison basis, we predicted our data without a rollin
 
 
 <a name="drop"></a> 
-## 3.B. Let's take a look at the financial drops ?
+## 3.B. Let's take a look at the financial drops 
 The interesting thing here is to look at the drops on the figure. 
 There are three very noticable drops, one in 2008 (this one is expected), one in 2010 and one in 2014. 
 
@@ -317,7 +317,7 @@ Here, the difference between the MAE improvement before and during the crash str
 
 **Why would our model predict better before the crash rather than during ?** 
 First of all, let's think about the variation of our trends before and during the crashes. 
-As mentionned before, when the exchange rate increases, it means that the dollar has crashed. The import in the US becomes very expensive, people lose their purchasing power, they can afford foreign products anymore, least of all travel. Therefore, it seems logical that people in the US would inquiry more terms like *Prices*,*Cheap* etc... 
+As mentionned before, when the exchange rate increases, it means that the dollar has crashed. The import in the US becomes very expensive, people lose their purchasing power, they can not afford foreign products anymore, least of all travel. Therefore, it seems logical that people in the US would inquiry more terms like *Prices*,*Cheap* etc... 
 If this is the case, then the difference between the US queries and the European queries will increase.
 
 On the other hand, during all of the concerned crashes (decreasing portions), the EU currency has crashed. As a consequence, the exchange rate has decreased. In that case, it is the import cost in Europe that becomes higher, the people loose their purchasing power and they do not have the financial means to travel anymore. Here, it seems logical that the European people would inquire more terms like *Prices*,*Cheap* etc... 
