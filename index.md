@@ -111,7 +111,6 @@ Are you lost because you don't know what that is ? Don't worry, we will give som
 This model is like a linear regression, but instead of predicting the response (here the initial claims for unemployment benefits) with other observations that might be related to the response , we will predict our response basing us on previous observations of this same observation. So we have the following relation: 
 
 ![Image](../img/Formula3.png)
-<div align="center"> y(t) = b1*y(t-1) + b0 +e(t)  </div>
     
 where *b1* and *b0* are the coefficients obtained fitting the model. We will call this the base model. We will train this model for the period between 2011 and 2020.
 
@@ -122,7 +121,6 @@ We are using here the trends *Local/Jobs* and *Society/Social Services/Welfare &
 The trends model look like this : 
 
 ![Image](../img/Formula4.png)
-<div align="center"> y(t) = b1*y(t-1) + b2*Jobs + b3*Welfare & Unemployment +  b0 +e(t) </div> 
     
 Now, we will train both models for the period from 2004 to 2011 and predict the initial claims for the same period and we get: 
 
@@ -337,7 +335,6 @@ The MAE improvement for the 2014, still remains negative. However it is "less" n
 Lastly, we tried to make the predictions without the trend *Inflation* (just for the 2008 crash) to see how the MAE scores changed. The MAE improvement before the crash is roughly -2.73 % whereas the MAE improvement during the crash is -7.24 %. This value is much worse than the one we got when prediction only with the *Inflation* trend. 
 Thus, we can conclude that the *Inflation* trend is the most acurate and important trend and removing the others greatly improves our model predictions.
 
-Can we use the google trends model to predict financial recession?
 
 # Conclusion 
 
