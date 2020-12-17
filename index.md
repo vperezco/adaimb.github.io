@@ -329,8 +329,7 @@ Here are the results of the correlation between each trend and the US/EU exchang
 The trend *Inflation* is positively correlated to the exchange rate uring this drop period. We are going to try to conserve only this feature for the prediction of drops to see if we can get a better improvement compared to the baseline model.
 
 ![Image](../img/Matplotlib_save_plot.png)
-<br>
-<br>
+
 
 
 We can see that for the 2008 and the 2010 crash, the MAE improvement is positive (they were negative before). This tells us that the trends model predictions are much better. 
