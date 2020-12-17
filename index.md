@@ -204,10 +204,9 @@ Let's try and see if we come to the same conclusion...
 We decided to work only on the US/EU exchange rate whereas the authors of the paper worked on exchange rates for various world currencies. 
 
 The first question which comes to our minds is the following : what model are we going to use ?
-We decided to rely on the model used in the paper, which is a simple **linear regression with one seasonal term $y_{t-1}$ and the different trends found which are related to the variable predicted.**
+We decided to rely on the model used in the paper, which is a simple **linear regression with one seasonal term y_{t-1} and the different trends found which are related to the variable predicted.**
 
-![Image](../img/Formula1.png)
-<div align="center"> y(t) = b1*y(t-1) + sum(bi*Trend_i)  b0 +e(t) </div> 
+<div align="center"> ![Image](../img/Formula1.png) </div> 
 
 We will in addition, use an increasing rolling window with an initial size of 10. 
 This model, of course, is meant to be compared to a base model as in the first part of this extension. 
