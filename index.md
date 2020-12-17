@@ -244,7 +244,7 @@ We considered this size of rolling window enough since we only have one seasonal
 **So, we train both models with a sample of fixed size and we predict the next value.** The size of the sample increases at every incrementation, therefore, at the end all values have been predicted. 
 By training both models for the overall period from 1999 to 2020 and predict the US/EU exchange rate for the same period and we get the following results :
 
-![Image](../img/Q3_in-out_Comparison.png)
+![Image](../img/Q3_in_out_Comparison.png)
 <br>
 <br>
 
