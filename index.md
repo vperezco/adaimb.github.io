@@ -41,6 +41,8 @@ This page is structured in three sections:
 <a name="trends"></a> 
 # 1. What are Google Trends
 
+Google Trends is an online tool that helps users visualise and discover trends in people’s search behaviour. It will not only allow users to see what topics and queries have been popular in searches but will also give access to data containing how often specific searches have been made over a certain period of time, that you can specify in the filters. The data can then be visualised by Google, producing a trend graph of the searched topic over the selected amount of time, allowing you to efficiently analyse the results. 
+
 <a name="meaning"></a> 
 ## 1.A. What does Google Trends measure anyway?
 
@@ -54,7 +56,12 @@ From the FAQ of Google Trends:
 *Each data point is divided by the total searches of the geography and time range it represents to compare relative popularity. Otherwise, places with the most search volume would always be ranked highest.
 The resulting numbers are then scaled on a range of 0 to 100 based on a topic’s proportion to all searches on all topics.* — [Google Trends FAQs](https://support.google.com/trends/answer/4365533?hl=en)
 
-So, it allows us to display interest in a particular topic from around the globe or down to city-level geography. for each word in your search Google finds how much search volume in each region and time period your term had relative to all the searches in that region and time period. It’s **anonymized** (no one is personally identified), **categorized** (determining the topic for a search query) and **aggregated** (grouped together). 
+So, it allows us to display interest in a particular topic from around the globe or down to city-level geography. for each word in your search Google finds how much search volume in each region and time period your term had relative to all the searches in that region and time period. It’s **anonymized** (no one is personally identified), **categorized** (determining the topic for a search query) and **aggregated** (grouped together). After entering your desired topic, you will be presented with these four refinement options, which will allow you to further scrutinise and fully explore the results. These are:
+
+- Location: Possibilities range from global level to city level
+- Timeframe: Options go as far as 2004, up until the last hour
+- Category: Options include Arts & Entertainment, Sports, Politics, Finance, News etc.
+- Search Type: Image Search, News Search, Google Shopping and Youtube Search
 
 It combines all of queries into a unique measure of popularity and scales their values across the topics so that the **largest measure is set to 100**. Indeed, it does not tell you exactly how many searches occurred for your query but gives a nice approximation.
 
