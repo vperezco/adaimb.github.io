@@ -206,7 +206,7 @@ We decided to work only on the US/EU exchange rate whereas the authors of the pa
 The first question which comes to our minds is the following : what model are we going to use ?
 We decided to rely on the model used in the paper, which is a simple **linear regression with one seasonal term y_{t-1} and the different trends found which are related to the variable predicted.**
 
-<div align="center"> ![Image](../img/Formula1.png) </div> 
+![Image](../img/Formula1.png)
 
 We will in addition, use an increasing rolling window with an initial size of 10. 
 This model, of course, is meant to be compared to a base model as in the first part of this extension. 
