@@ -232,11 +232,11 @@ Let's recap the model we will use here :
 
 Trends model : 
 ![Image](../img/Formula2.png)
-<div align="center"> y(t) = b1*y(t-1) + b2*deltaInflation + b3*deltaPrices + b4*deltaCPI + b5*deltaCheap + b0 +e(t) </div> 
+
 
 Base model : 
 ![Image](../img/Formula3.png)
-<div align="center"> y(t) = b1*y(t-1) + b0 +e(t) </div> 
+
 
 As previously mentioned, the type of forecasting we perform is an out of sample one and we use an increasing rolling window of initial size 10. 
 We considered this size of rolling window enough since we only have one seasonal term at time (t-1). 
@@ -244,7 +244,9 @@ We considered this size of rolling window enough since we only have one seasonal
 **So, we train both models with a sample of fixed size and we predict the next value.** The size of the sample increases at every incrementation, therefore, at the end all values have been predicted. 
 By training both models for the overall period from 1999 to 2020 and predict the US/EU exchange rate for the same period and we get the following results :
 
-METTRE FIGURE, LA RENDRE UN PEU PLUS GLAMOUR. 
+![Image](../img/Q3_in-out_Comparison.png)
+<br>
+<br>
 
 By looking at this figure, you may think that the predictions made by the **Google Trends are not very good.** Well, let's take a closer look at the figure. 
 We notice that on the increasing portions of the figure, the predictions made by the trends model seem to fit the actual data very closely whereas on the decreasing portions of the figure, the predictions are completely false. 
@@ -254,7 +256,9 @@ When computing the improvement of the trends model, we get that Google Trends im
 
 In order to get another comparison basis, we predicted our data without a rolling window. Since, it is in-sample forecasting, it is not as relevant as the first predictions. However, we still can see that the trends model gives us a better prediction than the base model since the MAE improvement is around 1.5 %. 
 
-METTRE FIGURE
+![Image](../img/Q3_TurningPoints.png)
+<br>
+<br>
 
 
 <a name="drop"></a> 
@@ -283,25 +287,31 @@ By predicting the US/EU exchange rate only on those specific periods, we get ver
 2008 crash : 
 The MAE improvement before the crash is about -2.73 % whereas the MAE improvement during the crash is about -4.44 %. Even though those improvements values tell us that the trends models did not really improve the predictions for the 2008 crash, we can still clearly see that the prediction before the crash is much better than the prediction during the crash. 
 
-FIGURE
+![Image](../img/Q3_2008.png)
+<br>
+<br>
 
 2010 crash : 
 For this time period, the difference between the MAE improvement before and during the crash is quite striking. Indeed, the MAE improvement before the crash is roughly 48 % whereas the MAE improvement after the crash is -41.05 %. 
 
-FIGURE 
+![Image](../img/Q3_2010.png)
+<br>
+<br>
 
 2014 crash : 
 Here, the difference between the MAE improvement before and during the crash strikes us as well. The MAE improvement before the crash is roughly 14.7 % whereas the MAE improvement after the crash is -25.22 %. 
  
-FIGURE 
+![Image](../img/Q3_2014.png)
+<br>
+<br>
 
 
 
 **Why would our model predict better before the crash rather than during ?** 
 First of all, let's think about the variation of our trends before and during the crashes. 
-As mentionned before, when the exchange rate increases, it means that the dollar has crashed. The import in the US becomes very expensive, people lose their purchasing power, they can afford foreign products anymore or to travel. Therefore, it seems logical that people in the US would inquiry more terms like *Prices*,*Inflation* etc... 
+As mentionned before, when the exchange rate increases, it means that the dollar has crashed. The import in the US becomes very expensive, people lose their purchasing power, they can afford foreign products anymore or to travel. Therefore, it seems logical that people in the US would inquiry more terms like *Prices*,*Cheap* etc... 
 If this is the case, then the difference between the US queries and the European queries would increase.
-On the other hand, during all of the concerned crashes, the EU currency has crashed. As a consequence, the exchange rate has decreased. In that case, it is the import cost in Europe that becomes higher, the people loose their purchasing power and they do not have the financial means to travel anymore. Here, it seems logical that the European people would inquire more terms like *Prices*,*Inflation* etc... 
+On the other hand, during all of the concerned crashes, the EU currency has crashed. As a consequence, the exchange rate has decreased. In that case, it is the import cost in Europe that becomes higher, the people loose their purchasing power and they do not have the financial means to travel anymore. Here, it seems logical that the European people would inquire more terms like *Prices*,*Cheap* etc... 
 Therefore, the difference between the US queries and the European queries would decrease. 
 
 Now how is this related to the fact that our model predicts better before the crash rather than during ?
@@ -312,11 +322,16 @@ What we want to do here is to improve the prediction over the drop periods using
 
 Here are the results of the correlation between each trend and the US/EU exchange rate for the 2008 crash (during the crash) : 
 
-FIGURE
+![Image](../img/Q3_Correlation.png)
+<br>
+<br>
 
 The trend *Inflation* is positively correlated to the exchange rate uring this drop period. We are going to try to conserve only this feature for the prediction of drops to see if we can get a better improvement compared to the baseline model.
 
-TABLEAU
+![Image](../img/Matplotlib_save_plot.png)
+<br>
+<br>
+
 
 We can see that for the 2008 and the 2010 crash, the MAE improvement is positive (they were negative before). This tells us that the trends model predictions are much better. 
 The MAE improvement for the 2014, still remains negative. However it is "less" negative than before (remember the MAE improvement during the crash was equal to -25.22 %). 
