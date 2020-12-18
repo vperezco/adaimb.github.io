@@ -242,7 +242,7 @@ Now the real analysis can begin !
 Let's recap the model we will use here : 
 
 Trends model : 
-![Image](../img/Formula2.png)
+![Image](../img/Formula.png)
 
 
 Base model : 
