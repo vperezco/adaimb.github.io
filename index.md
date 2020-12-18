@@ -93,6 +93,9 @@ However, manipulating google Trends could be **tricky**... Indeed, what there ar
 
 We can see that depending on the word, the **volume of queries differ A LOT**. That is why it is better when it comes to pick google trends to select categories or subjects rather than search terms, because they will group different search terms and we don't risk to pick a search term that has not a lot of queries. 
 
+
+<a href="#index">Back to Index</a>
+
 <a name="story"></a> 
 # 2. A data story
 
@@ -103,7 +106,6 @@ Even if today the society is well-evolved and most of the people benefits to be 
 
 To interpret this, it could be interesting to use Google Trends to predict these observations and find out if they are somehow related to a societal elements (like an economic crisis, a pandemic etc...). The second goal is to see the how reliable this model is, if we can rely on these predictions to adapt political and economic decisions.
 
-<a href="#index">Back to Index</a>
 
 <a name="curse"></a> 
 ## 2.A. The curse of unemployment
@@ -193,6 +195,8 @@ The idea is to integrate the Google searchis related to Covid-19 and find out if
 And, effectively, the improvement of the trends model compared to the base model is about **29.52%** (and we had before an improvement of 28.34% without the covid trend). **We can conclude that it not improves dramatically the predictions, but it does help a little.**
 
 However, Google trends are very useful to predict anormal events that are related to a crisis or particular societal events. 
+
+<a href="#index">Back to Index</a>
 
 <a name="exchange"></a> 
 # 3. How do I get the best exchange rate ?
@@ -355,6 +359,7 @@ Finally, we have seen the limits of these models, as the use of Google trends se
 *In fine*, we have made a generalization of forecasting methods using Google Trends and we have seen through a very specific example that these kind of models are useful even when the observations are kind of unpredictable since those observations result from particular events or contexts which are very well reflected through Google Trends data. 
 
 
+<a href="#index">Back to Index</a>
 
 
 [//]:#(---------- END OF WHAT IS VISIBLE ----------------)
